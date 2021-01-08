@@ -21,6 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
+  SSRPL_URL: https://github.com/SuLingGG/luci-app-ssr-plus
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -70,7 +71,7 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-        cd openwrt && git clone https://github.com/SuLingGG/luci-app-ssr-plus ./package/lean/luci-app-ssr-plus
+        git clone $SSRPL_URL -b $REPO_BRANCH ./package/lean/luci-app-ssr-plus
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Install feeds
