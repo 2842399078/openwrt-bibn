@@ -70,6 +70,8 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
+      git clone https://github.com/coolsnowwolf/lede/tree/2915c44a11ca0ee40b51ff5d9c18a0da1951e170/package/lean/luci-app-ssr-plus ./package/lean
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
