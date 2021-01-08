@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  SSRPL_URL: https://github.com/SuLingGG/luci-app-ssr-plus
+  SSRPL_URL: https://github.com/Lienol/openwrt-package
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
