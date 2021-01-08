@@ -60,7 +60,7 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        git clone $SSRPL_URL -b $REPO_BRANCH openwrt/package/
+        git clone $SSRPL_URL openwrt/package/
         mv openwrt/package/openwrt-package/* openwrt/package/lean/
         rm -rf openwrt/package/openwrt-package
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
